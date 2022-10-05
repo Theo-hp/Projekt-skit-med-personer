@@ -13,31 +13,45 @@ namespace Projekt_skit_med_personer
         static void Main(string[] args)
         {
             Console.WriteLine("Input Here:");
-            string ans = Console.ReadLine();
-            Console.WriteLine("Thank you ", ans);
-
-            room1();
+            string name = Console.ReadLine();
+            Console.WriteLine("Thank you ", name, "Do you want to enter the dungeon! Y/N");
+            string enter = Console.ReadLine();
+            if (enter == "Y" || enter == "y")
+            {
+                room1p1();
+            };
 
 
 
         }
-        static void room1()
+        static void room1p1()
         {
             Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
+            fight1();
+
         }
-        static void fight1()
+
+        static void room1p2()
+        {
+               
+        }
+
+        static void room2p1()
+        {
+
+        }
+
+
+        public static void fight1()
         {
             monster mS = new monster();
             mS.HP = 10;
             mS.atk = 4;
             mS.name = "Skeleton";
             Console.WriteLine("You are fighting a", mS.name);
-            Console.WriteLine("What do you want to use:  type: 1=fist  2=knife");
-            string weapon = Console.ReadLine();
-            if (weapon.ToLower() = "knife")
-            {
 
-            };
+            room1p2();
+            
 
 
         }
