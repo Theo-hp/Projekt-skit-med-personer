@@ -12,9 +12,9 @@ namespace Projekt_skit_med_personer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Input Here:");
+            Console.WriteLine("Name:");
             string name = Console.ReadLine();
-            Console.WriteLine("Thank you ", name, "Do you want to enter the dungeon! Y/N");
+            Console.WriteLine("Thank you "+name+" Do you want to enter the dungeon! Y/N");
             string enter = Console.ReadLine();
             if (enter == "Y" || enter == "y")
             {
@@ -27,7 +27,7 @@ namespace Projekt_skit_med_personer
         static void room1p1()
         {
             Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
-            fight1();
+            monster("skeleton");
 
         }
 
@@ -36,25 +36,22 @@ namespace Projekt_skit_med_personer
 
         }
 
-        public static void fight1()
+        static void monster(string monster)
         {
-            monster mS = new monster();
-            mS.HP = 10;
-            mS.atk = 4;
-            mS.name = "Skeleton";
-            Console.WriteLine("You are fighting a", mS.name);
 
-            room1p2();
+            int[] skeleton = { 10, 4, 1 };
+            int[] zombie = { 20, 2, 4 };
+            if (monster == "skeleton")
+            {
+                int monster_stat_hp = skeleton[0];
+                int monster_stat_atk = skeleton[1];
+                int monster_stat_def = skeleton[2];
+                Console.WriteLine("You are fighting a "+monster+"it has "+monster_stat_hp+"hp and "+monster_stat_atk+"atk and "+monster_stat_def+"def!");
+            }
+            //monster syntax hp, atk, def
             
-
-
+           
         }
-
-        public class monster
-        {
-            public int HP;
-            public int atk;
-            public string name;
-        }
+        
     }
 }
