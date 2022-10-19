@@ -21,7 +21,27 @@ namespace Projekt_skit_med_personer
                 room1p1();
             };
 
-
+        static void inventory()
+        {
+            
+            /*
+            0 = weapon pys
+            1 = weapon mag
+            2 = boots mag
+            3 = pants pys
+            4 = cheast pys
+            5 = head mag
+            */
+            int[][] inventory =
+            {
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+                new int[] {0, 0, 0},
+            };
+            
 
         }
         static void room1p1()
