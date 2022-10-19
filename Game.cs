@@ -46,7 +46,7 @@ namespace Projekt_skit_med_personer
                 int monster_stat_hp = skeleton[0];
                 int monster_stat_atk = skeleton[1];
                 int monster_stat_def = skeleton[2];
-                Console.WriteLine("You are fighting a "+monster+"it has "+monster_stat_hp+"hp and "+monster_stat_atk+"atk and "+monster_stat_def+"def!");
+                Console.WriteLine("You are fighting a "+monster+"! It has "+monster_stat_hp+"hp and "+monster_stat_atk+"atk and "+monster_stat_def+"def!");
                 
             }
             //monster syntax hp, atk, def
