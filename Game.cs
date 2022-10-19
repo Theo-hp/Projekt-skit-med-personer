@@ -14,65 +14,71 @@ namespace Projekt_skit_med_personer
         {
             Console.WriteLine("Name:");
             string name = Console.ReadLine();
-            Console.WriteLine("Thank you "+name+" Do you want to enter the dungeon! Y/N");
+            Console.WriteLine("Thank you " + name + " Do you want to enter the dungeon! Y/N");
             string enter = Console.ReadLine();
             if (enter == "Y" || enter == "y")
             {
                 room1p1();
             };
 
-        static void inventory()
-        {
-            
-            /*
-            0 = weapon pys
-            1 = weapon mag
-            2 = boots mag
-            3 = pants pys
-            4 = cheast pys
-            5 = head mag
-            */
-            int[][] inventory =
+            static int inventory(int wepp, int wepm, int defp, int defm)
             {
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-            };
-            
 
-        }
-        static void room1p1()
-        {
-            Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
-            monster("skeleton");
+                Random rd = new Random();
+                int wepdmg = 0;
 
-        }
+                int[][] physicalweapon =
+                    {
+                    new int[] { 1, 2, 3 },
+                    new int[] { 2, 4, 6 },
+                    new int[] { 3, 8, 12 },
+                };
 
-        static void room1p2()
-        {
+                if (wepp == 0)
+                {
+                    wepdmg = physicalweapon[0][rd.Next(physicalweapon.Length)];
+                }
+                else if (wepp == 1)
+                {
+                    wepdmg = physicalweapon[1][rd.Next(physicalweapon.Length)];
+                }
+                else if (wepp == 2)
+                {
+                    wepdmg = physicalweapon[2][rd.Next(physicalweapon.Length)];
+                };
 
-        }
+                return wepdmg;
 
-        static void monster(string monster)
-        {
-
-            int[] skeleton = { 10, 4, 1 };
-            int[] zombie = { 20, 2, 4 };
-            if (monster == "skeleton")
+            }
+            static void room1p1()
             {
-                int monster_stat_hp = skeleton[0];
-                int monster_stat_atk = skeleton[1];
-                int monster_stat_def = skeleton[2];
-                Console.WriteLine("You are fighting a "+monster+"! It has "+monster_stat_hp+"hp and "+monster_stat_atk+"atk and "+monster_stat_def+"def!");
+                Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
+                monster("skeleton");
                 
             }
-            //monster syntax hp, atk, def
-            
-           
+
+            static void room1p2()
+            {
+
+            }
+
+            static void monster(string monster)
+            {
+
+                int[] skeleton = { 10, 4, 1 };
+                int[] zombie = { 20, 2, 4 };
+                if (monster == "skeleton")
+                {
+                    int monster_stat_hp = skeleton[0];
+                    int monster_stat_atk = skeleton[1];
+                    int monster_stat_def = skeleton[2];
+                    Console.WriteLine("You are fighting a " + monster + "! It has " + monster_stat_hp + "hp and " + monster_stat_atk + "atk and " + monster_stat_def + "def!");
+
+                }
+                //monster syntax hp, atk, def
+
+
+            }
         }
-        
     }
 }
