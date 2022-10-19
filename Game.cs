@@ -21,34 +21,40 @@ namespace Projekt_skit_med_personer
                 room1p1();
             };
 
-            static void inventory()
+            static int inventory(int wepp, int wepm, int defp, int defm)
             {
 
-                /*
-                0 = weapon pys
-                1 = weapon mag
-                2 = boots mag
-                3 = pants pys
-                4 = cheast pys
-                5 = head mag
-                */
-                int[][] inventory =
-                {
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-                new int[] {0, 0, 0},
-            };
+                Random rd = new Random();
+                int wepdmg = 0;
 
+                int[][] physicalweapon =
+                    {
+                    new int[] { 1, 2, 3 },
+                    new int[] { 2, 4, 6 },
+                    new int[] { 3, 8, 12 },
+                };
+
+                if (wepp == 0)
+                {
+                    wepdmg = physicalweapon[0][rd.Next(physicalweapon.Length)];
+                }
+                else if (wepp == 1)
+                {
+                    wepdmg = physicalweapon[1][rd.Next(physicalweapon.Length)];
+                }
+                else if (wepp == 2)
+                {
+                    wepdmg = physicalweapon[2][rd.Next(physicalweapon.Length)];
+                };
+
+                return wepdmg;
 
             }
             static void room1p1()
             {
                 Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
                 monster("skeleton");
-
+                
             }
 
             static void room1p2()
