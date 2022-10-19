@@ -42,6 +42,7 @@ namespace Projekt_skit_med_personer
 
         static void Main(string[] args)
         {
+
             Console.WriteLine("Name:");
             string name = Console.ReadLine();
             Console.WriteLine("Thank you " + name + " Do you want to enter the dungeon! Y/N");
