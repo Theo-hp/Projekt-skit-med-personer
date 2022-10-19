@@ -14,26 +14,26 @@ namespace Projekt_skit_med_personer
         {
             Console.WriteLine("Name:");
             string name = Console.ReadLine();
-            Console.WriteLine("Thank you "+name+" Do you want to enter the dungeon! Y/N");
+            Console.WriteLine("Thank you " + name + " Do you want to enter the dungeon! Y/N");
             string enter = Console.ReadLine();
             if (enter == "Y" || enter == "y")
             {
                 room1p1();
             };
 
-        static void inventory()
-        {
-            
-            /*
-            0 = weapon pys
-            1 = weapon mag
-            2 = boots mag
-            3 = pants pys
-            4 = cheast pys
-            5 = head mag
-            */
-            int[][] inventory =
+            static void inventory()
             {
+
+                /*
+                0 = weapon pys
+                1 = weapon mag
+                2 = boots mag
+                3 = pants pys
+                4 = cheast pys
+                5 = head mag
+                */
+                int[][] inventory =
+                {
                 new int[] {0, 0, 0},
                 new int[] {0, 0, 0},
                 new int[] {0, 0, 0},
@@ -41,38 +41,45 @@ namespace Projekt_skit_med_personer
                 new int[] {0, 0, 0},
                 new int[] {0, 0, 0},
             };
-            
 
-        }
-        static void room1p1()
-        {
-            Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
-            monster("skeleton");
 
-        }
-
-        static void room1p2()
-        {
-
-        }
-
-        static void monster(string monster)
-        {
-
-            int[] skeleton = { 10, 4, 1 };
-            int[] zombie = { 20, 2, 4 };
-            if (monster == "skeleton")
-            {
-                int monster_stat_hp = skeleton[0];
-                int monster_stat_atk = skeleton[1];
-                int monster_stat_def = skeleton[2];
-                Console.WriteLine("You are fighting a "+monster+"! It has "+monster_stat_hp+"hp and "+monster_stat_atk+"atk and "+monster_stat_def+"def!");
-                
             }
-            //monster syntax hp, atk, def
-            
-           
+            static void room1p1()
+            {
+                Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
+                monster("skeleton");
+
+            }
+
+            static void room1p2()
+            {
+
+            }
+
+            static void monster(string monster)
+            {
+                int[] skeleton = { 10, 4, 1 };
+                int[] zombie = { 20, 2, 4 };
+                int monster_stat_hp = 0;
+                int monster_stat_atk = 0;
+                int monster_stat_def = 0;
+                int player_atk = inventory.weapon_damage;
+
+                if (monster == "skeleton")
+                {
+                    monster_stat_hp = skeleton[0];
+                    monster_stat_atk = skeleton[1];
+                    monster_stat_def = skeleton[2];
+                }
+                Console.WriteLine("You are fighting a " + monster + "! It has " + monster_stat_hp + "hp and " + monster_stat_atk + "atk and " + monster_stat_def + "def!");
+                monster_stat_hp = monster_stat_hp - player_atk;
+                Console.WriteLine("You attack first and deal " + player_atk + " Damage! The "+monster+" has "+monster_stat_hp+"HP left!");
+
+                //monster syntax hp, atk, def
+
+
+            }
+
         }
-        
     }
 }

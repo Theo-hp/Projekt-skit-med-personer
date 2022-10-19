@@ -4,8 +4,13 @@ Instalation:
 	[2]run "Game.cs"
 
 How to play:
-	Just follow the instructions given in game! And have fun ;)
+	[1]Run "Game.cs"
+	[2]Just follow the instructions given in game! And have fun ;)
+
 
 Why?:
 	Just a game to have fun with. 
 	We are just beginners at C# so expect the unexpected.
+
+Editing:
+	You can just edit the files, so feel free.
