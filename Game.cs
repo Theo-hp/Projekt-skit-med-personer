@@ -71,7 +71,7 @@ namespace Projekt_skit_med_personer
                 int monster_stat_hp = 0;
                 int monster_stat_atk = 0;
                 int monster_stat_def = 0;
-                int player_atk = inventory.weapon_damage;
+                int player_atk = inventory.;
 
                 if (monster == "skeleton")
                 {
