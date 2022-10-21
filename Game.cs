@@ -14,29 +14,87 @@ namespace Projekt_skit_med_personer
         {
 
             Random rd = new Random();
-            int wepdmg = 0;
+            int wepdmgp = 0;
+            int wepdmgm = 0;
+            int notdiep = 0;
+            int notdiem = 0;
 
             int[][] physicalweapon =
-                {
-                    new int[] { 1, 2, 3 },
-                    new int[] { 2, 4, 6 },
-                    new int[] { 3, 8, 12 },
-                };
-
-            if (wepp == 0)
             {
-                wepdmg = physicalweapon[0][rd.Next(physicalweapon.Length)];
-            }
-            else if (wepp == 1)
-            {
-                wepdmg = physicalweapon[1][rd.Next(physicalweapon.Length)];
-            }
-            else if (wepp == 2)
-            {
-                wepdmg = physicalweapon[2][rd.Next(physicalweapon.Length)];
+                new int[] { 1, 2, 3 },
+                new int[] { 2, 4, 6 },
+                new int[] { 4, 8, 12 },
             };
 
-            return wepdmg;
+            int[][] magicalweapon =
+            {
+                new int[] { 1, 2, 3 },
+                new int[] { 2, 4, 6 },
+                new int[] { 4, 8, 12 },
+            };
+
+            int[][] physicaldefence =
+            {
+                new int[] { 0, 1, 2 },
+                new int[] { 2, 3, 4 },
+                new int[] { 4, 5, 6 },
+            };
+
+            int[][] magicaldefence =
+            {
+                new int[] { 0, 1, 2 },
+                new int[] { 2, 3, 4 },
+                new int[] { 4, 5, 6 },
+            };
+
+            if (wepp == 1)
+            {
+                wepdmgp = physicalweapon[0][rd.Next(physicalweapon.Length)];
+            }else if (wepp == 2)
+            {
+                wepdmgp = physicalweapon[1][rd.Next(physicalweapon.Length)];
+            }else if (wepp == 3)
+            {
+                wepdmgp = physicalweapon[2][rd.Next(physicalweapon.Length)];
+            };
+
+            if (wepm == 1)
+            {
+                wepdmgm = magicalweapon[0][rd.Next(magicalweapon.Length)];
+            }else if (wepm == 2)
+            {
+                wepdmgm = magicalweapon[1][rd.Next(magicalweapon.Length)];
+            }else if (wepm == 3)
+            {
+                wepdmgm = magicalweapon[2][rd.Next(magicalweapon.Length)];
+            };
+
+            if (defp == 1)
+            {
+                notdiep = physicaldefence[0][rd.Next(physicaldefence.Length)];
+            }else if (defp == 2)
+            {
+                notdiep = physicaldefence[1][rd.Next(physicaldefence.Length)];
+            }else if (defp == 3)
+            {
+                notdiep = physicaldefence[2][rd.Next(physicaldefence.Length)];
+            }
+
+            if (defm == 1)
+            {
+                notdiem = magicaldefence[0][rd.Next(magicaldefence.Length)];
+            }else if (defm == 2)
+            {
+                notdiem = magicaldefence[1][rd.Next(magicaldefence.Length)];
+            }else if (defm == 3)
+            {
+                notdiem = (magicaldefence[2][rd.Next(magicaldefence.Length)];
+            }
+
+            return wepdmgp;
+            return wepdmgm;
+            return notdiep;
+            return notdiem;
 
         }
 
