@@ -105,8 +105,8 @@ namespace Projekt_skit_med_personer
             static void monster(string monster, string wep_type, int wep_num, int armor_val)
             {
                 //monster syntax hp, atk, def
-                int[] skeleton = { 10, 4, 1};
-                int[] zombie = { 20, 2, 4};
+                int[] skeleton = { 5, 3, 0};
+                int[] zombie = { 10, 2, 1};
                 int monster_stat_hp = 0;
                 int monster_stat_atk = 0;
                 int monster_stat_def = 0;
@@ -141,6 +141,7 @@ namespace Projekt_skit_med_personer
                 {
                     Console.WriteLine("You are fighting a " + monster + "! It has " + monster_stat_hp + "hp left and " + monster_stat_atk + "atk and " + monster_stat_def + "def!");
                     Console.WriteLine("Heavy attack beats defend and defend beats light attack and light attack beats heavy attack!");
+                    Console.WriteLine("You have "+player_hp+"hp left!");
                     Console.WriteLine("Do you want to dodge, attack or defend: light attack: 1     heavy attack: 2     defend: 3");
                     string choise = Console.ReadLine();
                     Random rand = new Random();
@@ -152,15 +153,23 @@ namespace Projekt_skit_med_personer
                             if (wep_type_dmg == monster_type)
                             {
                                 damage_dealt = player_atk - monster_stat_def;
+                                if (damage_dealt < 0)
+                                {
+                                    damage_dealt = 0;
+                                }
                                 monster_stat_hp -= damage_dealt;
                             }
-                            Console.WriteLine("You used light attack and the ", monster, " used heavy attack, you dealt: ", damage_dealt, "Damage! It has ", monster_stat_hp, "hp left!");
+                            Console.WriteLine("You used light attack and the "+ monster+ " used heavy attack, you dealt: "+ damage_dealt+ "Damage! It has " +monster_stat_hp+ "hp left!");
                         }
                         else if (monster_choise == 3)
                         {
-                            damage_dealt -= (monster_stat_atk - player_def);
+                            damage_dealt = (monster_stat_atk - player_def);
+                            if (damage_dealt < 0)
+                            {
+                                damage_dealt = 0;
+                            }
                             player_hp -= damage_dealt;
-                            Console.WriteLine("You used light attack and the ", monster, " used defend, you took ", damage_dealt, "Damage! You have ", player_hp, "hp left!");
+                            Console.WriteLine("You used light attack and the "+ monster+ " used defend, you took "+ damage_dealt+ "Damage! You have "+ player_hp+ "hp left!");
                         }
                         else
                         {
@@ -174,15 +183,23 @@ namespace Projekt_skit_med_personer
                             if (wep_type_dmg == monster_type)
                             {
                                 damage_dealt = player_atk - monster_stat_def;
+                                if (damage_dealt < 0)
+                                {
+                                    damage_dealt = 0;
+                                }
                                 monster_stat_hp -= damage_dealt;
                             }
-                            Console.WriteLine("You used heavy attack and the ", monster, " used defend, you dealt: ", damage_dealt, "Damage! It has ", monster_stat_hp, "hp left!");
+                            Console.WriteLine("You used heavy attack and the ", monster+ " used defend, you dealt: "+ damage_dealt+ "Damage! It has "+ monster_stat_hp+ "hp left!");
                         }
                         else if (monster_choise == 1)
                         {
-                            damage_dealt -= (monster_stat_atk - player_def);
+                            damage_dealt = (monster_stat_atk - player_def);
+                            if (damage_dealt < 0)
+                            {
+                                damage_dealt = 0;
+                            }
                             player_hp -= damage_dealt;
-                            Console.WriteLine("You used heavy attack and the ", monster, " used light attack, you took ", damage_dealt, "Damage! You have ", player_hp, "hp left!");
+                            Console.WriteLine("You used heavy attack and the "+ monster+ " used light attack, you took "+ damage_dealt+ "Damage! You have "+ player_hp+ "hp left!");
                         }
                         else
                         {
@@ -196,21 +213,30 @@ namespace Projekt_skit_med_personer
                             if (wep_type_dmg == monster_type)
                             {
                                 damage_dealt = player_atk - monster_stat_def;
+                                if (damage_dealt < 0)
+                                {
+                                    damage_dealt = 0;
+                                }
                                 monster_stat_hp -= damage_dealt;
                             }
-                            Console.WriteLine("You used defend and the ", monster, " used light attck, you dealt: ", damage_dealt, "Damage! It has ", monster_stat_hp, "hp left!");
+                            Console.WriteLine("You used defend and the "+ monster+ " used light attck, you dealt: "+ damage_dealt+ "Damage! It has "+ monster_stat_hp+ "hp left!");
                         }
                         else if (monster_choise == 2)
                         {
-                            damage_dealt -= (monster_stat_atk - player_def);
+                            damage_dealt = (monster_stat_atk - player_def);
+                            if (damage_dealt < 0)
+                            {
+                                damage_dealt = 0;
+                            }
                             player_hp -= damage_dealt;
-                            Console.WriteLine("You used defend and the ", monster, " used heavy attack, you took ", damage_dealt, "Damage! You have ", player_hp, "hp left!");
+                            Console.WriteLine("You used defend and the "+ monster+ " used heavy attack, you took "+ damage_dealt+ "Damage! You have "+ player_hp+ "hp left!");
                         }
                         else
                         {
                             Console.WriteLine("You both defend and deal 0dmg");
                         }
                     }
+                    Console.WriteLine("You claim victory over the " + monster + "!");
                 }
             }
         }
