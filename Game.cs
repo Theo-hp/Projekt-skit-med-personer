@@ -94,7 +94,9 @@ namespace Projekt_skit_med_personer
             {
                 Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
                 monster("skeleton", "phys_wep", 1, 0);
-                
+                Console.WriteLine("You take the skeletons steel sword, you now do: 5 dmg");
+                Console.WriteLine("Nice but you discover a zombie behind a wall.");
+                monster("zombie", "phys_wep", 2, 0);
             }
 
             static void room1p2()
@@ -107,7 +109,7 @@ namespace Projekt_skit_med_personer
                 //monster syntax hp, atk, def
                 int[] skeleton = { 5, 3, 0};
                 int[] zombie = { 10, 2, 1};
-                int monster_stat_hp = 0;
+                int monster_stat_hp = 1;
                 int monster_stat_atk = 0;
                 int monster_stat_def = 0;
                 int player_hp = 100;
@@ -116,6 +118,9 @@ namespace Projekt_skit_med_personer
                 string wep_type_dmg = null;
                 string monster_type = null;
                 int damage_dealt = 0;
+
+                Console.WriteLine("In Monster");
+                Console.WriteLine("hp:" + monster_stat_hp);
 
                 if (wep_type == "phys_wep")
                 {
@@ -136,10 +141,22 @@ namespace Projekt_skit_med_personer
                     monster_stat_def = skeleton[2];
                     monster_type = "phys";
                 }
+                if (monster == "zombie")
+                {
+                    monster_stat_hp = zombie[0];
+                    monster_stat_atk = zombie[1];
+                    monster_stat_def = zombie[2];
+                    monster_type = "phys";
+                }
 
                 while (monster_stat_hp >= 0)
                 {
                     Console.WriteLine("You are fighting a " + monster + "! It has " + monster_stat_hp + "hp left and " + monster_stat_atk + "atk and " + monster_stat_def + "def!");
+                    /*
+                     * Här börjar själva "fight" systemet.
+                     * Det är baserat på sten sax påse där istället för sten, sax och påse så är det,
+                     * Light attack, Heavy attack och defend. 
+                     */
                     Console.WriteLine("Heavy attack beats defend and defend beats light attack and light attack beats heavy attack!");
                     Console.WriteLine("You have "+player_hp+"hp left!");
                     Console.WriteLine("Do you want to dodge, attack or defend: light attack: 1     heavy attack: 2     defend: 3");
@@ -189,7 +206,7 @@ namespace Projekt_skit_med_personer
                                 }
                                 monster_stat_hp -= damage_dealt;
                             }
-                            Console.WriteLine("You used heavy attack and the ", monster+ " used defend, you dealt: "+ damage_dealt+ "Damage! It has "+ monster_stat_hp+ "hp left!");
+                            Console.WriteLine("You used heavy attack and the "+ monster+ " used defend, you dealt: "+ damage_dealt+ "Damage! It has "+ monster_stat_hp+ "hp left!");
                         }
                         else if (monster_choise == 1)
                         {
@@ -236,8 +253,11 @@ namespace Projekt_skit_med_personer
                             Console.WriteLine("You both defend and deal 0dmg");
                         }
                     }
-                    Console.WriteLine("You claim victory over the " + monster + "!");
+                    
+
                 }
+                Console.WriteLine("You claim victory over the " + monster + "!");
+                return;
             }
         }
     }
