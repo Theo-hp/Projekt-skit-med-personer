@@ -10,12 +10,12 @@ namespace Projekt_skit_med_personer
 {
     internal class game
     {
-        static int inventory(int wep_phys, int wep_magic, int defp)
+        static int inventory(int wep_phys, int wep_magic, int defence_point)
         {
 
             Random rd = new Random();
-            int wepdmgp = 0;
-            int wepdmgm = 0;
+            int wep_dmg_phys = 0;
+            int wep_dmg_magic = 0;
             int def = 0;
 
             int[][] physicalweapon =
@@ -41,39 +41,39 @@ namespace Projekt_skit_med_personer
 
             if (wep_phys == 1)
             {
-                wepdmgp = physicalweapon[0][rd.Next(physicalweapon.Length)];
+                wep_dmg_phys = physicalweapon[0][rd.Next(physicalweapon.Length)];
             }else if (wep_phys == 2)
             {
-                wepdmgp = physicalweapon[1][rd.Next(physicalweapon.Length)];
+                wep_dmg_phys = physicalweapon[1][rd.Next(physicalweapon.Length)];
             }else if (wep_phys == 3)
             {
-                wepdmgp = physicalweapon[2][rd.Next(physicalweapon.Length)];
+                wep_dmg_phys = physicalweapon[2][rd.Next(physicalweapon.Length)];
             };
 
             if (wep_magic == 1)
             {
-                wepdmgm = magicalweapon[0][rd.Next(magicalweapon.Length)];
+                wep_dmg_magic = magicalweapon[0][rd.Next(magicalweapon.Length)];
             }else if (wep_magic == 2)
             {
-                wepdmgm = magicalweapon[1][rd.Next(magicalweapon.Length)];
+                wep_dmg_magic = magicalweapon[1][rd.Next(magicalweapon.Length)];
             }else if (wep_magic == 3)
             {
-                wepdmgm = magicalweapon[2][rd.Next(magicalweapon.Length)];
+                wep_dmg_magic = magicalweapon[2][rd.Next(magicalweapon.Length)];
             };
 
-            if (defp == 1)
+            if (defence_point == 1)
             {
                 def = defence[0][rd.Next(defence.Length)];
-            }else if (defp == 2)
+            }else if (defence_point == 2)
             {
                 def = defence[1][rd.Next(defence.Length)];
-            }else if (defp == 3)
+            }else if (defence_point == 3)
             {
                 def = defence[2][rd.Next(defence.Length)];
             }
 
-            return wepdmgp;
-            return wepdmgm;
+            return wep_dmg_phys;
+            return wep_dmg_magic;
             return def;
 
         }
