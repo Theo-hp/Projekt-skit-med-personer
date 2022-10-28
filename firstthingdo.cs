@@ -53,7 +53,6 @@ namespace Projekt_skit_med_personer
             room1p2();
             
 
-
         }
 
         public class monster
