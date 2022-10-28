@@ -10,14 +10,16 @@ namespace Projekt_skit_med_personer
 {
     internal class game
     {
+        // This is the "iventory". Its where the damage and def is set for eche battle
         static int inventory(int wepp, int wepm, int defp)
         {
-
+            //variable and so we can use randome
             Random rd = new Random();
             int wepdmgp = 0;
             int wepdmgm = 0;
             int def = 0;
 
+            //arreys for weapon and armure changes the type and the stat
             int[][] physicalweapon =
             {
                 new int[] { 1, 2, 3 },
@@ -39,6 +41,7 @@ namespace Projekt_skit_med_personer
                 new int[] { 4, 5, 6 },
             };
 
+            // if-loops so we chan pick the item 1 for weak 2 for medium 3 for strong
             if (wepp == 1)
             {
                 wepdmgp = physicalweapon[0][rd.Next(physicalweapon.Length)];
@@ -72,6 +75,7 @@ namespace Projekt_skit_med_personer
                 def = defence[2][rd.Next(defence.Length)];
             }
 
+            // returns so we can use the variables elsewhere
             return wepdmgp;
             return wepdmgm;
             return def;
