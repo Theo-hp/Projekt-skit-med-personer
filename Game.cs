@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace Projekt_skit_med_personer
 {
-    internal class game
+    internal class gameboy
     {
         static int inventory(int wep_phys, int wep_magic, int defence_point)
         {
@@ -87,23 +87,67 @@ namespace Projekt_skit_med_personer
             string enter = Console.ReadLine();
             if (enter == "Y" || enter == "y")
             {
-                room1p1();
+                floor1p1();
             };
 
-            static void room1p1()
+            static void floor1p1()
             {
-                Console.WriteLine("You enter the first room of the dungeon! You see a skeleton!");
+                Console.WriteLine("You enter the spiral abyss in search of riches beyond human imagination. \nBut unbeknown to you is that pain and suffering are the only things the abyss has to offer.");
+                Console.WriteLine("After wandering aimlessly you are attacked by monsters. \nWell what did you expect, it is the abyss after all, you’re bound to encounter enemies along your path.");
                 monster("skeleton", "phys_wep", 1, 0);
-                Console.WriteLine("You take the skeletons steel sword, you now do: 5 dmg");
-                Console.WriteLine("Nice but you discover a zombie behind a wall.");
+                Console.WriteLine("You continue on through the corridors…");
+                Console.WriteLine("You see a light ahead, it is a camp of monsters.");
                 monster("zombie", "phys_wep", 2, 0);
+                Console.WriteLine("After defeating the monsters you hear some voices, you decide to follow them but not reveal yourself. \nEventually they find the staircase down and you follow after you are sure they won’t be close to the staircase…");
+                floor1p2();
             }
 
-            static void room1p2()
+            static void floor1p2()
+            {
+                Console.WriteLine("When you get down you make sure to head away from voices, it is best to avoid people when possible, so you were told at least.");
+                Console.WriteLine("The bland walls of the abyss melt into each other you may have walked in many circles, been in the same places over and over. ");
+                Console.WriteLine("You start thinking it would be best to trail the people you followed in the beginning. \nBeing lost in thought you are caught by surprise!");
+                monster("zombie", "phys_wep", 2, 0);
+                Console.WriteLine("The after defeating the monsters you continue forward…");
+                Console.WriteLine("After what feels like a few hours you find the staircase to the next floor…");
+                floor1p3();
+            }
+            static void floor1p3()
+            {
+                Console.WriteLine("You decide to rest by the staircase but out of view, \nit will be easier to follow someone who knows their way around the floors. ");
+                Console.WriteLine("You awake hearing voices, surprised you were able to fall asleep in this unsettling place. \nStaying silent you peek toward the staircase out of the place were you were hiding. ");
+                Console.WriteLine("A group of what seems like merchants are at the foot of the staircase, you overhear their conversation…");
+                Console.WriteLine("It seems they are heading towards the deepest part of the 2nd floor, where Zetsubou lies.");
+                Console.WriteLine("Following the group you keep your distance as best you can, \nthe fleeting glances of the group tell you there are 3 merchants which have hired a group of 2 mercenaries to help protect them from the numerous threats on the way to Zetsubou. \nThey seem to have worked together before, they have visible chemistry and understand each other well. ");
+                Console.WriteLine("From behind you hear the sounds of monsters gathering so you decide to ambush them before they push you into the people in front or are too many to handle…");
+                monster("zombie", "phys_wep", 2, 0);
+                Console.WriteLine("Since nobody came back you assume the sounds of battle had not reached them…");
+                Console.WriteLine("Pushing on you notice it is eerily quiet, there are no sounds ahead of you. \nCould the other group have gotten that far ahead? You decide to pick up the pace.");
+                Console.WriteLine("You come to the staircase, but in the adjacent corridor you see a group of monsters. \nYou decide to fight the monsters, for fun if not any other reason…");
+                floor2p1();
+            }
+
+            static void floor2p1()
+            {
+                int player_hp = 100;
+                Console.WriteLine("Entering the 2nd floor you start to feel nauseous, the feeling disappears briefly, you are glad the feeling doesn’t persist. ");
+                Console.WriteLine("The second floor looks very much like the first. Bland and boring gray polished walls, painted red in several places, blood. ");
+                Console.WriteLine("You realize the group is nowhere to be seen, you didn’t take too long fighting the monsters… \nYou remember the journal saying something about time going faster on the lower floors. \nYou don’t know how strong the effect is, but since you don’t hear anything you assume they have at least a several minute head start. ");
+                Console.WriteLine("You decide to head out. ");
+                monster("zombie", "phys_wep", 2, 0);
+                monster("zombie", "phys_wep", 2, 0);
+                floor2p2();
+            }
+
+            static void floor2p2()
+            {
+                floor2p3();
+            }
+
+            static void floor2p3()
             {
 
             }
-
 
             /*
              * Monster är en meathod som gör så att man slåss mot ett monster.
@@ -125,7 +169,6 @@ namespace Projekt_skit_med_personer
                 string monster_type = null;
                 int damage_dealt = 0;
 
-                Console.WriteLine("In Monster");
                 Console.WriteLine("hp:" + monster_stat_hp);
                 //definerar olika variabler beroende på vilket monster man slåss mot.
                 if (wep_type == "phys_wep")
@@ -172,7 +215,7 @@ namespace Projekt_skit_med_personer
                      */
                     Console.WriteLine("Heavy attack beats defend and defend beats light attack and light attack beats heavy attack!");
                     Console.WriteLine("You have "+player_hp+"hp left!");
-                    Console.WriteLine("Do you want to dodge, attack or defend: light attack: 1     heavy attack: 2     defend: 3");
+                    Console.WriteLine("Do you want to dodge, attack or defend:   light attack: 1     heavy attack: 2     defend: 3");
                     string choise = Console.ReadLine();
                     Random rand = new Random();
                     int monster_choise = rand.Next(4);
@@ -266,8 +309,7 @@ namespace Projekt_skit_med_personer
                             Console.WriteLine("You both defend and deal 0dmg");
                         }
                     }
-                    
-
+                    Console.Clear();
                 }
                 Console.WriteLine("You claim victory over the " + monster + "!");
                 return;
