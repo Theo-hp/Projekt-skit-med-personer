@@ -131,7 +131,7 @@ namespace Projekt_skit_med_personer
 
             static void floor2p1()
             {
-                int player_hp = 100;
+
                 Console.WriteLine("Entering the 2nd floor you start to feel nauseous, the feeling disappears briefly, you are glad the feeling doesn’t persist. ");
                 Console.WriteLine("The second floor looks very much like the first. Bland and boring gray polished walls, painted red in several places, blood. ");
                 Console.WriteLine("You realize the group is nowhere to be seen, you didn’t take too long fighting the monsters… \nYou remember the journal saying something about time going faster on the lower floors. \nYou don’t know how strong the effect is, but since you don’t hear anything you assume they have at least a several minute head start. ");
