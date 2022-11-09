@@ -1,20 +1,21 @@
 <h1>Caveman Abyss</h1>
-<br /><br />
-This game is a good old fasioned text-based dugeon crawler that isn't next gen but still might provide some happiness to those who play it. 
-Fight your way through a dungeon and loot your dead enemies to defeat stronger enemies!
+<br />
+Caveman Abyss is a good old fasioned text-based dugeon crawler that isn't exactly next gen but still might provide some happiness to those who play it. 
+In Caveman Abyss you fight your way through a dungeon and loot your dead enemies to defeat stronger enemies!
+<br/>
+Caveman Abyss is entirely written in C# and is our first large project in C# so it may be a bit wonky and buggy, but i see that as part of the experience. 
 <br />
 <br />
 <image title="picture" alt="Picture of the game" src="https://iili.io/bqKCPe.md.png">
 <br /><br />
 Features:<br />
-____This game features:<br />
 	<ul>
 		<li>The good old text-based gameplay we all love!</li>
 		<li>A combat system!</li>
 		<li>Fight your way through a dungeon and claim loot!</li>
 		<li>A story!</li>
 	</ul>
-
+<br />
 
 Instalation:<br />
 <ol>
@@ -37,4 +38,6 @@ Why?:<br />
 </ul>
 <br />
 Editing:<br />
-You can just edit the files, so feel free.<br />
+<ul>
+	<li>You can just edit the files, so feel free.</li>
+</ul>
