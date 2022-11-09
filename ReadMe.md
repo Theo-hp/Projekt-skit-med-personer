@@ -4,14 +4,15 @@ Fight your way through a dungeon and loot your dead enemies to defeat stronger e
 <br />
 <br />
 [![bqKCPe.md.png](https://iili.io/bqKCPe.md.png)](https://freeimage.host/i/bqKCPe)
+<image title="picture" alt="alternate" src="https://iili.io/bqKCPe.md.png">
 <br /><br />
 Features:
-	This game features:
+____This game features:
 	<ul>
-		<li>The good old text-based gameplay we all love</li>
-		<li>A combat system:</li>
-		<li>	Fight your way through a dungeon and claim loot</li>
-		<li>A story</li>
+		<li>The good old text-based gameplay we all love!</li>
+		<li>A combat system!</li>
+		<li>Fight your way through a dungeon and claim loot!</li>
+		<li>A story!</li>
 	</ul>
 
 
