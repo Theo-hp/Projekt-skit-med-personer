@@ -3,28 +3,28 @@ Fight your way through a dungeon and loot your dead enemies to defeat stronger e
 
 
 [![bqKCPe.md.png](https://iili.io/bqKCPe.md.png)](https://freeimage.host/i/bqKCPe)
-<br><br>
-Features:<br>
-	This game features:<br>
-		The good old text-based gameplay we all love<br>
-		A combat system:<br>
-			Fight your way through a dungeon and claim loot<br>
-		A story<br>
+<br /><br />
+Features:<br />
+	This game features:<br />
+		The good old text-based gameplay we all love<br />
+		A combat system:<br />
+			Fight your way through a dungeon and claim loot<br />
+		A story<br />
 
 
-Instalation:<br>
-	[0]Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework<br>
-	[1]unzip file in a clean directory.<br>
-	[2]run "Game.cs"<br>
-	<br>
-How to play:<br>
-	[1]Run "Game.cs"<br>
-	[2]Just follow the instructions given in game! And have fun ;)<br>
-	<br>
+Instalation:<br />
+	[0]Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework<br />
+	[1]unzip file in a clean directory.<br />
+	[2]run "Game.cs"<br />
+	<br />
+How to play:<br />
+	[1]Run "Game.cs"<br />
+	[2]Just follow the instructions given in game! And have fun ;)<br />
+	<br />
 
-Why?:<br>
-	Just a game to have fun with. <br>
-	We are just beginners at C# so expect the unexpected.<br>
-	<br>
-Editing:<br>
-	You can just edit the files, so feel free.<br>
+Why?:<br />
+	Just a game to have fun with. <br />
+	We are just beginners at C# so expect the unexpected.<br />
+	<br />
+Editing:<br />
+	You can just edit the files, so feel free.<br />
