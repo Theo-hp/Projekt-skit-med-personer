@@ -2,7 +2,7 @@
 <br />
 Caveman Abyss is a good old fasioned text-based dugeon crawler that isn't exactly next gen but still might provide some happiness to those who play it. 
 In Caveman Abyss you fight your way through a dungeon and loot your dead enemies to defeat stronger enemies!
-<br/>
+<br/><br/>
 Caveman Abyss is entirely written in C# and is our first large project in C# so it may be a bit wonky and buggy, but i see that as part of the experience. 
 <br />
 <br />
