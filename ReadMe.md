@@ -20,7 +20,7 @@ Features:<br />
 Instalation:<br />
 <ol>
 	<li>Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework</li>
-	<li>unzip file in a clean directory.</li>
+	<li>unzip "Project-skit-med-personer.zip" file in a clean directory.</li>
 	<li>run "Game.cs"</li>
 </ol>
 <br />
