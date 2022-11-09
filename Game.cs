@@ -152,13 +152,13 @@ namespace Projekt_skit_med_personer
             }
 
             /*
-             * Monster är en meathod som gör så att man slåss mot ett monster.
-             * Det är som sten sax påse fast istället för sten sax och påse så är det olika typer av attacker
-             * Light attack Heavy attack och defend alla dem slår en av dem andra och blir besegrade av den andra.
+             * Monster is a meathod to fight monsters.
+             * It's like rock, paper scissors but instead it's light attack, heavy attack and defend.
              */
             static void monster(string monster, string wep_type, int wep_num, int armor_val)
             {
                 //monster syntax hp, atk, def
+                //define variables
                 int[] skeleton = { 5, 3, 0};
                 int[] zombie = { 10, 2, 1};
                 int monster_stat_hp = 1;
@@ -172,7 +172,7 @@ namespace Projekt_skit_med_personer
                 int damage_dealt = 0;
 
                 Console.WriteLine("hp:" + monster_stat_hp);
-                //definerar olika variabler beroende på vilket monster man slåss mot.
+                //Defines difrent variables depending on what monster you are fighting.
                 if (wep_type == "phys_wep")
                 {
                     wep_type_dmg = "phys";
@@ -200,20 +200,18 @@ namespace Projekt_skit_med_personer
                     monster_type = "phys";
                 }
 
-                //En while loop så att striden fortsätter så länge som monstrett lever.
+                //A while loop to keep the fight going.
                 while (monster_stat_hp >= 0)
                 {
-                    //så det slutar om man dör
+                    //To stop it when you die.
                     if (player_hp <= 0)
                     {
                         Environment.Exit(0);
                     }
                     Console.WriteLine("You are fighting a " + monster + "! It has " + monster_stat_hp + "hp left and " + monster_stat_atk + "atk and " + monster_stat_def + "def!");
                     /*
-                     * Här börjar själva "fight" systemet.
-                     * Det är baserat på sten sax påse där istället för sten, sax och påse så är det,
-                     * Light attack, Heavy attack och defend.
-                     * Man skriver 1 2 eller 3 och programet använder samma för monstrett så det kommer också använda 1 2 och 3 för attacker.
+                     * Here the fight begins!
+                     * The player writes 1, 2 or 3 depending on what to use.
                      */
                     Console.WriteLine("Heavy attack beats defend and defend beats light attack and light attack beats heavy attack!");
                     Console.WriteLine("You have "+player_hp+"hp left!");
