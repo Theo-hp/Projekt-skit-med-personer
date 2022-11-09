@@ -10,6 +10,7 @@ namespace Projekt_skit_med_personer
 {
     internal class gameboy
     {
+        //This is the "inventory" system
         static int inventory(int wep_phys, int wep_magic, int defence_point)
         {
             //variable and so we can use randome
@@ -41,7 +42,7 @@ namespace Projekt_skit_med_personer
             };
 
             // if-loops so we chan pick the item 1 for weak 2 for medium 3 for strong
-            if (wepp == 1)
+            if (wep_phys == 1)
             {
                 wep_dmg_phys = physicalweapon[0][rd.Next(physicalweapon.Length)];
             }else if (wep_phys == 2)
@@ -131,24 +132,13 @@ namespace Projekt_skit_med_personer
 
             static void floor2p1()
             {
-                int player_hp = 100;
                 Console.WriteLine("Entering the 2nd floor you start to feel nauseous, the feeling disappears briefly, you are glad the feeling doesn’t persist. ");
                 Console.WriteLine("The second floor looks very much like the first. Bland and boring gray polished walls, painted red in several places, blood. ");
                 Console.WriteLine("You realize the group is nowhere to be seen, you didn’t take too long fighting the monsters… \nYou remember the journal saying something about time going faster on the lower floors. \nYou don’t know how strong the effect is, but since you don’t hear anything you assume they have at least a several minute head start. ");
                 Console.WriteLine("You decide to head out. ");
                 monster("zombie", "phys_wep", 2, 0);
                 monster("zombie", "phys_wep", 2, 0);
-                floor2p2();
-            }
-
-            static void floor2p2()
-            {
-                floor2p3();
-            }
-
-            static void floor2p3()
-            {
-
+                Console.WriteLine("You don't see a way through. You decide to turn back. ");
             }
 
             /*
