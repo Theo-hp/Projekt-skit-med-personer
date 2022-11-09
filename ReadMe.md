@@ -1,13 +1,12 @@
-#Caveman Abyss
-
+<h1>Caveman Abyss</h1>
+<br /><br />
 This game is a good old fasioned text-based dugeon crawler that isn't next gen but still might provide some happiness to those who play it. 
 Fight your way through a dungeon and loot your dead enemies to defeat stronger enemies!
-
 <br />
 <br />
-<image title="picture" alt="alternate" src="https://iili.io/bqKCPe.md.png">
+<image title="picture" alt="Picture of the game" src="https://iili.io/bqKCPe.md.png">
 <br /><br />
-Features:
+Features:<br />
 ____This game features:<br />
 	<ul>
 		<li>The good old text-based gameplay we all love!</li>
