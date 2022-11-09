@@ -219,6 +219,7 @@ namespace Projekt_skit_med_personer
                     Console.WriteLine("You have "+player_hp+"hp left!");
                     Console.WriteLine("Do you want to dodge, attack or defend:   light attack: 1     heavy attack: 2     defend: 3");
                     string choise = Console.ReadLine();
+                    Console.Clear();
                     Random rand = new Random();
                     int monster_choise = rand.Next(4);
                     if (choise == "1")
@@ -311,7 +312,6 @@ namespace Projekt_skit_med_personer
                             Console.WriteLine("You both defend and deal 0dmg");
                         }
                     }
-                    Console.Clear();
                 }
                 Console.WriteLine("You claim victory over the " + monster + "!");
                 return;
