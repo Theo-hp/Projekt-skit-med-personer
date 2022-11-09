@@ -3,7 +3,6 @@ Fight your way through a dungeon and loot your dead enemies to defeat stronger e
 
 <br />
 <br />
-[![bqKCPe.md.png](https://iili.io/bqKCPe.md.png)](https://freeimage.host/i/bqKCPe)
 <image title="picture" alt="alternate" src="https://iili.io/bqKCPe.md.png">
 <br /><br />
 Features:
@@ -17,18 +16,24 @@ ____This game features:
 
 
 Instalation:<br />
-	[0]Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework<br />
-	[1]unzip file in a clean directory.<br />
-	[2]run "Game.cs"<br />
-	<br />
+<ol>
+	<li>Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework</li>
+	<li>unzip file in a clean directory.</li>
+	<li>run "Game.cs"</li>
+</ol>
+<br />
 How to play:<br />
-	[1]Run "Game.cs"<br />
-	[2]Just follow the instructions given in game! And have fun ;)<br />
-	<br />
+<ol>
+	<li>run "Game.cs"</li>
+	<li>Just follow the instructions given in game! And have fun ;)</li>
+</ol>
+<br />
 
 Why?:<br />
-	Just a game to have fun with. <br />
-	We are just beginners at C# so expect the unexpected.<br />
-	<br />
+<ul>
+	<li>Just a game to have fun with.</li>
+	<li>We are just beginners at C# so expect the unexpected.</li>
+</ul>
+<br />
 Editing:<br />
-	You can just edit the files, so feel free.<br />
+____You can just edit the files, so feel free.<br />
