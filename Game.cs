@@ -41,7 +41,7 @@ namespace Projekt_skit_med_personer
             };
 
             // if-loops so we chan pick the item 1 for weak 2 for medium 3 for strong
-            if (wepp == 1)
+            if (wep_phys == 1)
             {
                 wep_dmg_phys = physicalweapon[0][rd.Next(physicalweapon.Length)];
             }else if (wep_phys == 2)
