@@ -161,7 +161,6 @@ namespace Projekt_skit_med_personer
                 string monster_type = null;
                 int damage_dealt = 0;
 
-                Console.WriteLine("hp:" + monster_stat_hp);
                 //Defines difrent variables depending on what monster you are fighting.
                 if (wep_type == "phys_wep")
                 {
