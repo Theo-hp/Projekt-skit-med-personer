@@ -17,7 +17,7 @@ Features:<br />
     </ul>
 <br />
 
-Instalation:<br />>
+Instalation:<br />
 
 <ol>
     <li>Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework</li>
