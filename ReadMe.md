@@ -9,35 +9,37 @@ Caveman Abyss is entirely written in C# and is our first large project in C# so 
 <image title="picture" alt="Picture of the game" src="https://iili.io/bqKCPe.md.png">
 <br /><br />
 Features:<br />
-	<ul>
-		<li>The good old text-based gameplay we all love!</li>
-		<li>A combat system!</li>
-		<li>Fight your way through a dungeon and claim loot!</li>
-		<li>A story!</li>
-	</ul>
+    <ul>
+        <li>The good old text-based gameplay we all love!</li>
+        <li>A combat system!</li>
+        <li>Fight your way through a dungeon and claim loot!</li>
+        <li>A story!</li>
+    </ul>
 <br />
 
-Instalation:<br />
+Instalation:<br />>
+
 <ol>
-	<li>Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework</li>
-	<li>unzip "Project-skit-med-personer.zip" file in a clean directory.</li>
-	<li>run "Game.cs"</li>
+    <li>Donload an install the latest .NET framework from this adress: https://dotnet.microsoft.com/en-us/download/dotnet-framework</li>
+    <li>unzip "Project-skit-med-personer.zip" file in a clean directory.</li>
+    <li>run "Game.cs"</li>
 </ol>
 <br />
 How to play:<br />
 <ol>
-	<li>run "Game.cs"</li>
-	<li>Just follow the instructions given in game! And have fun ;)</li>
+    <li>run "Game.cs"</li>
+    <li>Just follow the instructions given in game! And have fun ;)</li>
 </ol>
 <br />
 
 Why?:<br />
+
 <ul>
-	<li>Just a game to have fun with.</li>
-	<li>We are just beginners at C# so expect the unexpected.</li>
+    <li>Just a game to have fun with.</li>
+    <li>We are just beginners at C# so expect the unexpected.</li>
 </ul>
 <br />
 Editing:<br />
 <ul>
-	<li>You can just edit the files, so feel free.</li>
+    <li>You can just edit the files, so feel free.</li>
 </ul>
